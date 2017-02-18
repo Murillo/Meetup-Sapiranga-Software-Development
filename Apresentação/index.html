@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Criando seu primeiro Hello World com Machine Learning</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="img/ML.png">
+					<h4>Machine Learning:</h4>
+					<h3>Criando seu primeiro "Hello World"</h3>
+					<p>
+						<small>Por <a href="http://murillogrubler.com/" target="_blank">Murillo Grübler</a> / <a href="http://twitter.com/msgrubler" target="_blank">@msgrubler</a></small>
+					</p>
+				</section>
+				<section data-background="img/ML.png">
+					<h2>Roteiro</h2>
+					<ol>
+						<li>O que é Machine Learning?</li>
+						<li>O que ML pode fazer?</li>
+						<li>Métodos de aprendizado</li>
+						<li>Técnicas</li>
+						<li>Exemplo</li>
+						<li>Mãos a obra...</li>
+						<li>Cursos e documentários</li>
+					</ol>
+				</section>
+				<section data-background="img/ML.png">
+					<h2>Um pouco de teoria...</h2>
+					<img src="img/dormindo.jpg"  width="900" />
+				</section>
+				<section data-background="img/ML.png">
+					<h2>O que é Machine Learning (ML)?</h2>
+					<p style="font-size: 25px;">
+						Machine Learning, também conhecido como Aprendizado de Máquina na Terra Tupiniquim, é uma subárea da Inteligência Artificial focada na construção de algoritmos que possam aprender a fazer previsões a partir de padrões em informações.
+					</p>
+				</section>
+				<section data-background="img/ML.png">
+					<section>
+						<h2>O que ML pode fazer?</h2>
+					</section>
+					<section>
+						<h2>Recomendação</h2>
+						<img src="img/netflix.gif"  width="800" />
+					</section>
+
+					<section>
+						<h2>Análise de imagens</h2>
+						<img src="img/google-photo.gif"  width="900" />
+					</section>
+
+					<section>
+						<h2>SmartCars</h2>
+						<img src="img/google-car.gif" width="800" />
+					</section>
+
+					<section>
+						<h2>E mais...</h2>
+						<ul>
+							<li>Detecção fraudes</li>
+							<li>Negociação financeira</li>
+							<li>Cuidados de saúde</li>
+							<li>Personalização no Marketing</li>
+							<li>Pesquisa on-line</li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-background="img/ML.png">
+					<h2>Métodos de aprendizado</h2>
+					<ul>
+						<li>Aprendizado supervisionado</li>
+						<li>Aprendizado não supervisionado</li>
+						<li>Aprendizado por reforço</li>
+					</ul>
+				</section>
+
+				<section data-background="img/ML.png">
+					<section id="fragments">
+						<h2>Então... como identificar um</h2>
+						<div style="float: left" class="fragment">
+							<img src="img/Shih-Tzu10.jpg" width="450" />
+							<br />
+							Shih-tzu
+						</div>
+						<div style="float: left" class="fragment">
+							<img src="img/pastor-alemao.jpg" width="450" />
+							<br />
+							Pastor-alemão
+						</div>
+					</section>
+					<section id="fragments">
+						<div>
+							<h3>Programar as regras?</h3>
+							<div class="fragment">
+								<img src="img/super-codigo-2.gif" width="300">
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section data-background="img/ML.png" id="fragments">
+					<section>
+						<p style="font-size: 46px">Os quatro passos para criar um modelo ML:</p>
+						<ul>
+							<li class="fragment">Coleta de dados</li>
+							<li class="fragment">Seleção do modelo</li>
+							<li class="fragment">Treino do modelo</li>
+							<li class="fragment">Teste do modelo</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Características</h2>
+						<table>
+							<thead>
+								<tr>
+									<th>Item</th>
+									<th>Peso (Kg)</th>
+									<th>Tamanho (cm)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Shih-tzu</td>
+									<td align="center">5</td>
+									<td align="center">20</td>
+								</tr>
+								<tr>
+									<td>Shih-tzu</td>
+									<td align="center">5,7</td>
+									<td align="center">23</td>
+								</tr>
+								<tr>
+									<td>Shih-tzu</td>
+									<td align="center">6</td>
+									<td align="center">25</td>
+								</tr>
+								<tr>
+									<td>Pastor-alemão</td>
+									<td align="center">30</td>
+									<td align="center">60</td>
+								</tr>
+								<tr>
+									<td>Pastor-alemão</td>
+									<td align="center">32,5</td>
+									<td align="center">63</td>
+								</tr>
+								<tr>
+									<td>Pastor-alemão</td>
+									<td align="center">38</td>
+									<td align="center">65</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<section>
+						<img src="img/ml_map.png" width="900" />
+					</section>
+
+					<section>
+						<div>
+							<p>Como descobrir o valor de uma casa</p>
+							<table>
+								<thead>
+									<tr>
+										<th>Nº de quartos</th>
+										<th>Nº de banheiros</th>
+										<th>Garagem</th>
+										<th>Valor</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td align="center">2</td>
+										<td align="center">2</td>
+										<td align="center">1</td>
+										<td align="center">150k</td>
+									</tr>
+									<tr>
+										<td align="center">3</td>
+										<td align="center">1</td>
+										<td align="center">1</td>
+										<td align="center">140k</td>
+									</tr>
+									<tr>
+										<td align="center">1</td>
+										<td align="center">1</td>
+										<td align="center">0</td>
+										<td align="center">110k</td>
+									</tr>
+									<tr>
+										<td align="center">4</td>
+										<td align="center">3</td>
+										<td align="center">1</td>
+										<td align="center">200k</td>
+									</tr>
+									<tr>
+										<td align="center">2</td>
+										<td align="center">1</td>
+										<td align="center">0</td>
+										<td align="center">?</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div>
+							<img src="img/regressao_linear.png" />
+						</div>
+					</section>
+
+					<section>
+						<p>
+							Será que no momento que inicializarmos os coeficientes com
+							valores aleatórios, o algoritmo vai nos entregar um valor aceitável?
+						</p>
+						<p>H(x) = 0,1 + 2 * 0,6 + 1 * 0,5 + 0 * 0,1</p>
+						<div>
+							<img src="img/regressao_linear.png" />
+						</div>
+					</section>
+
+					<section>
+						<div>
+							<p>Regressão</p>
+							<img src="img/regressao-1.png" width="250" />
+							<img src="img/regressao-2.png" width="250" />
+						</div>
+						<div>
+							<p>Classificação</p>
+							<img src="img/grafico-2.png" width="250" />
+							<img src="img/grafico-3.png" width="250" />
+						</div>
+					</section>
+				</section>
+
+				<section data-background="img/ML.png">
+					<h2>Técnicas</h2>
+					<ul>
+						<li>Rede Neural Artificial</li>
+						<li>Algoritmo Genético</li>
+						<li>Árvore de Decisão</li>
+						<li>Regressão Linear</li>
+						<li>Regressão Logística</li>
+						<li>KNN (Vizinho mais próximo)</li>
+						<li>Entre outros...</li>
+					</ul>
+				</section>
+
+				<section data-background="img/ML.png">
+					<h2>Exemplo</h2>
+					<iframe src="http://harthur.github.io/brain/" width="800" height="600"></iframe>
+				</section>
+
+				<section data-background="img/ML.png">
+					<section>
+						<h2>Mãos à obra...</h2>
+						<img src="img/imgHandler.jpg" />
+					</section>
+					<section>
+						<h2>Ferramentas utilizadas</h2>
+						<a href="https://www.python.org/" target="_blank"><img src="img/python.png" width="250" style="border: 0px" /></a>
+						<a href="http://jupyter.org/" target="_blank"><img src="img/jupyter.png" width="250" style="border: 0px" /></a>
+						<a href="http://scikit-learn.org/stable/" target="_blank"><img src="img/scikit.png" width="250" style="border: 0px" /></a>
+					</section>
+					<section>
+						<a href="https://www.continuum.io/downloads" target="_blank"><img src="img/logo-anaconda.png" width="450" style="border: 0px" /></a>
+					</section>
+					<section>
+						<h2>Técnica utilizada</h2>
+						<p>
+							K-Nearest Neighbor (KNN)
+						</p>
+						<img src="img/grafico-4.png" width="600" />
+					</section>
+					<section>
+						<h3>Distância Euclidiana</h3>
+						<img src="img/grafico-5.png" width="650" />
+					</section>
+				</section>
+
+				<section data-background="img/ML.png">
+					<h2>Cursos e documentários</h2>
+					<ul>
+						<li>
+							<a href="https://github.com/open-source-society/data-science" target="_blank">
+								Open Source Society University - Data Science
+							</a>
+						</li>
+						<li>
+							<a href="https://www.coursera.org/learn/machine-learning/" target="_blank">
+								Curso de Machine Learning do Coursera
+							</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/watch?v=pTLqoeBpcmA" target="_blank">
+								Inteligência Artificial: O Computador Mais Inteligente do Mundo (Legendado)
+							</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/watch?v=40riCqvRoMs&list=LLMc1A_VuW9ex3CAozkaQcOQ&index=10">
+								TED Talks: How we teach computers to understand pictures | Fei Fei Li
+							</a>
+						</li>
+					</ul>
+				</section>
+
+				<section data-background="img/ML.png">
+					<h2>Dúvidas??</h2>
+					<img src="img/duvidas.gif" width="500" />
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+    			slideNumber: true,
+				showNotes: false,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
